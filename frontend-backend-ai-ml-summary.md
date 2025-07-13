@@ -1,3 +1,8 @@
+## 🗺️ Project Structure
+
+Here's an overview of how this learning repository is organized... 
+
+```
 myprojects/
 ├── naturescript.github.io/       <-- This is your main Git Repository for the GitHub Pages portfolio.
 │   ├── index.html
@@ -35,3 +40,5 @@ myprojects/
 ├── git-commands-cheatsheet.md
 ├── browser-devtools-tips.txt
 └── accessibility-notes.md
+
+```
