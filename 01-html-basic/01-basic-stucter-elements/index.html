@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลองใช้ Div และ Class</title>
+
+    <style>
+        .mycontainer {
+            border: 2px solid red;
+            padding: 20px;
+            margin: 10px;
+            background-color: lightyellow;
+            width: 80%;
+        }
+        /* เพิ่มสไตล์สำหรับ #header-section เพื่อให้เห็นผล */
+        #header-section { /* ใช้ # ตามด้วย ID เพื่อเลือก Element ด้วย ID */
+            background-color: lightgray;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="header-section">
+        <h1>ส่วนหัวของเว็บไซต์ (Header)</h1>
+        <p>นี่คือพื้นที่สำหรับโลโก้และเมนูนำทาง</p>
+    </div>
+
+    <div class="mycontainer">
+        <h1>นี่คือหัวข้อในกล่อง</h1>
+        <p>คุณเห็นกล่องนี้แล้วใช่ไหม? มันถูกตกแต่งด้วย CSS ครับ</p>
+        <p>ชื่อคลาส "mycontainer" ทำให้เราสามารถเลือกตกแต่งกล่องนี้โดยเฉพาะได้</p>
+    </div>
+
+    <p>นี่คือข้อความที่อยู่นอกกล่อง.</p>
+
+    
+<br>
+<br>
+<div class="note-section">
+        <p><strong>โน้ต:</strong> โค้ดด้านล่างนี้คือตัวอย่าง Emmet สำหรับสร้าง Sibling Elements:</p>
+        <pre><code>header+nav+main+footer</code></pre>
+        <p>ซึ่งจะขยายเป็นโค้ด HTML ดังนี้:</p>
+        <pre><code>&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;
+&lt;main&gt;&lt;/main&gt;
+&lt;footer&gt;&lt;/footer&gt;</code></pre>
+        <p>Emmet แบบนี้มีไว้เพื่อลดขั้นตอนในการเขียนโค้ดและช่วยให้เห็นโครงสร้างหลักของหน้าเว็บได้รวดเร็ว</p>
+    </div>
+
+
+
+<br>
+ข้อความจำลอง 1 ย่อหน้า กับ 3 ย่อหน้า
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tempora velit, alias molestiae, quis doloribus, non consequatur cumque quibusdam itaque ullam? Iure laboriosam itaque, repellendus magni officia accusamus temporibus nostrum?</p>
+
+<p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempore omnis, esse repellat ipsa ipsum cupiditate doloremque aliquam. Blanditiis in magni explicabo labore nemo necessitatibus ipsam sapiente, officiis at tenetur.</span><span>Odit blanditiis tempore, voluptatibus facere, doloribus laudantium quasi commodi quisquam fuga debitis reprehenderit consequuntur tempora? Aspernatur, quibusdam, repellat facilis ducimus id, ab sunt blanditiis voluptate pariatur accusantium eligendi earum fugiat!</span><span>Quaerat, dolorem. Quae sunt, vitae minima amet reprehenderit reiciendis aspernatur sint placeat deserunt quis tenetur modi laboriosam consequatur rem perspiciatis corporis dolores cum necessitatibus impedit architecto recusandae, ex omnis earum.</span></p>
+
+
+</body>
+</html>
