@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Attributes & Linking</title>
+</head>
+<body>
+    <h1>Learning HTML Attributes and Linking</h1>
+
+    <div id="attributes-section" class="content-block">
+        <h2>1. HTML Attributes</h2>
+        <p style="color: blue; font-size: 18px;">This paragraph has an <span class="attribute-example" title="Inline styles are often discouraged for maintainability.">inline style</span> attribute.</p>
+        <p id="unique-paragraph">This paragraph has a unique ID attribute.</p>
+        <span class="highlighted-text">This span has a class attribute.</span>
+        <p data-info="This is custom data">This paragraph uses a custom data attribute.</p>
+    </div>
+
+    <div id="linking-section" class="content-block">
+        <h2>2. Hyperlinks (`<a>` tag)</h2>
+        <h3>External Links:</h3>
+        <p>Visit <a href="https://www.google.com" target="_blank" title="Opens Google in a new tab">Google</a> for search.</p>
+        <p>Learn more at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">MDN Web Docs on HTML Attributes</a>.</p>
+
+        <h3>Internal Links (within the same site/folder):</h3>
+        <p>Go back to the <a href="../1.1-basic-structure-elements/index.html">Basic Structure Lesson</a> (if you've created its `index.html`).</p>
+        
+        <h3>Linking within the same page:</h3>
+        <p>
+            <a href="#attributes-section">Jump to Attributes Section</a> |
+            <a href="#linking-section">Jump to Linking Section</a> |
+            <a href="#image-section">Jump to Image Section</a>
+        </p>
+
+        <h3>Special Links:</h3>
+        <p>
+            Email me: <a href="mailto:your.email@example.com?subject=Inquiry%20from%20HTML%20Lesson&body=Hello,%20I%20have%20a%20question...">Send Email</a><br>
+            Call us: <a href="tel:+1234567890">Call +1234567890</a>
+        </p>
+    </div>
+
+    <div id="image-section" class="content-block">
+        <h2>3. Image Inclusion (`<img>` tag)</h2>
+        <img src="images/mountain.jpg" alt="A beautiful landscape image" width="400" height="250" title="Mountain_by_Shogun@pixabay">
+        <p>An image displayed from the local `images/` folder.</p>
+
+        <p>Click the image to go to MDN:</p>
+        <a href="https://developer.mozilla.org" target="_blank">
+            <img src="images/mdn_logo.png" alt="MDN Web Docs Logo" width="100" height="100">
+        </a>
+    </div>
+
+    <br><br>
+    <footer>
+        <p>&copy; 2025 My HTML Learning Journey</p>
+    </footer>
+
+</body>
+</html>
