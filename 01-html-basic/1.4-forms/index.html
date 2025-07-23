@@ -10,8 +10,59 @@
     <h1>Contact Us</h1>
 
     <form action="/submit-form" method="POST">
-        </form>
+        <div>
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="user_name" required>
+        </div>
+
+        <div>
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="user_email" required>
+        </div>
+
+        <div>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="user_message" rows="5" required></textarea>
+        </div>
+
+        <div style="margin-top: 20px;"> <label for="subject">Subject:</label><br>
+            <select id="subject" name="subject_matter">
+                <option value="">--Please choose an option--</option>
+                <option value="general_inquiry">General Inquiry</option>
+                <option value="technical_support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <p>Preferred Contact Method:</p>
+            <input type="radio" id="contact_email" name="contact_method" value="email" checked>
+            <label for="contact_email">Email</label><br>
+            <input type="radio" id="contact_phone" name="contact_method" value="phone">
+            <label for="contact_phone">Phone</label><br>
+            <input type="radio" id="contact_none" name="contact_method" value="none">
+            <label for="contact_none">No Preference</label>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <p>What topics are you interested in?</p>
+            <input type="checkbox" id="topic_html" name="topics[]" value="html">
+            <label for="topic_html">HTML</label><br>
+            <input type="checkbox" id="topic_css" name="topics[]" value="css">
+            <label for="topic_css">CSS</label><br>
+            <input type="checkbox" id="topic_js" name="topics[]" value="javascript">
+            <label for="topic_js">JavaScript</label>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Send Message">
+            <input type="reset" value="Reset Form">
+        </div>
+
+    </form>
 
 </body>
 
-</html>
+    </html>
+    
