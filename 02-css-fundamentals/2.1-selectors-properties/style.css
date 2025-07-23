@@ -1,0 +1,90 @@
+/* --- Universal Selector --- */
+/* เลือกทุก Element และกำหนดคุณสมบัติ */
+* {
+    box-sizing: border-box; /* ทำให้การคำนวณขนาด Element ง่ายขึ้น */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Element Selector --- */
+/* เลือก Element ด้วยชื่อแท็ก HTML */
+body {
+    background-color: #f4f4f4; /* สีพื้นหลังอ่อนๆ */
+    color: #333; /* สีกำหนดสีตัวอักษรเริ่มต้น */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #0056b3; /* สีน้ำเงินเข้มสำหรับ Heading */
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* --- Class Selector --- */
+/* เลือก Element ด้วย class attribute (ขึ้นต้นด้วยจุด .) */
+.highlight {
+    background-color: yellow; /* ไฮไลท์สีเหลือง */
+    font-weight: bold; /* ตัวหนา */
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.card {
+    background-color: #fff; /* พื้นหลังสีขาว */
+    border: 1px solid #ddd; /* เส้นขอบสีเทาอ่อน */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* มุมโค้งมน */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* เงาเล็กน้อย */
+}
+
+/* --- ID Selector --- */
+/* เลือก Element ด้วย id attribute (ขึ้นต้นด้วยเครื่องหมาย #) */
+#unique-paragraph {
+    font-style: italic; /* ตัวเอียง */
+    color: #cc0000; /* สีแดงเข้ม */
+    border-left: 5px solid #cc0000; /* เส้นขอบซ้าย */
+    padding-left: 10px;
+}
+
+#special-span {
+    text-decoration: underline; /* ขีดเส้นใต้ */
+    color: purple; /* สีม่วง */
+}
+
+/* --- Descendant Selector --- */
+/* เลือก Element ที่อยู่ภายใน Element อื่น (ใช้ช่องว่าง) */
+ul li {
+    list-style-type: square; /* เปลี่ยนสัญลักษณ์หน้ารายการ */
+    margin-left: 20px;
+}
+
+/* --- Child Selector --- */
+/* เลือก Element ที่เป็นลูกโดยตรงของ Element อื่น (ใช้เครื่องหมาย >) */
+/* สมมติว่าในอนาคตคุณอาจจะมี div > p ที่ต้องการสไตล์ต่างกัน */
+div.card > p {
+    color: #555; /* สีเทาเข้มสำหรับ paragraph ใน card */
+    font-size: 0.9em;
+}
+
+/* --- Hover Pseudo-class Selector --- */
+/* เลือก Element เมื่อเมาส์ไปชี้ */
+a:hover {
+    color: #007bff; /* เปลี่ยนสีลิงก์เมื่อเมาส์ชี้ */
+    text-decoration: underline;
+}
+
+/* --- Attribute Selector --- */
+/* เลือก Element ที่มี Attribute นั้นๆ หรือมีค่า Attribute นั้นๆ */
+img[alt] {
+    border: 2px dashed blue; /* เพิ่มเส้นขอบประสีน้ำเงินให้ภาพที่มี alt attribute */
+}
+
+input[type="text"] {
+    border: 1px solid green; /* เพิ่มเส้นขอบสีเขียวให้ input ที่เป็น type="text" */
+}
