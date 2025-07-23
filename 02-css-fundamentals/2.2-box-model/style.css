@@ -1,0 +1,155 @@
+
+
+/* Universal Selector สำหรับการรีเซ็ตพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* สำคัญมากสำหรับ Box Model */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white; /* ตั้งค่า h1 ใน header ให้เป็นสีขาว */
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline; /* ทำให้ลิงก์อยู่บรรทัดเดียวกัน */
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto; /* จัดกลางเนื้อหาหลัก */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #ccc; /* เส้นประแบ่ง Section */
+    padding-bottom: 20px;
+}
+
+section:last-child {
+    border-bottom: none; /* ไม่ต้องมีเส้นประสำหรับ Section สุดท้าย */
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* --- Box Model Specific Styles --- */
+
+.box {
+    background-color: #e0f7fa; /* สีพื้นหลังอ่อนๆ สำหรับกล่อง */
+    border: 2px solid #00bcd4; /* เส้นขอบสีฟ้า */
+    padding: 20px; /* ระยะห่างระหว่าง Content กับ Border */
+    margin: 20px 0; /* ระยะห่างระหว่างกล่องกับ Element อื่นๆ */
+    width: 300px; /* กำหนดความกว้างเริ่มต้น */
+    height: 100px; /* กำหนดความสูงเริ่มต้น */
+    text-align: center;
+    line-height: 1.2; /* จัดบรรทัดให้ชิดกันขึ้น */
+    display: flex; /* ใช้ Flexbox เพื่อจัดกลางเนื้อหา */
+    justify-content: center; /* จัดกลางตามแนวนอน */
+    align-items: center; /* จัดกลางตามแนวตั้ง */
+    font-weight: bold;
+    color: #00796b;
+    border-radius: 5px;
+}
+
+.content-box {
+    box-sizing: content-box; /* ค่า Default: width/height รวมแค่ Content */
+    background-color: #c8e6c9; /* สีเขียวอ่อน */
+    border-color: #4caf50; /* สีเขียวเข้ม */
+}
+
+.border-box {
+    box-sizing: border-box; /* width/height รวม Content + Padding + Border */
+    background-color: #ffcdd2; /* สีแดงอ่อน */
+    border-color: #f44336; /* สีแดงเข้ม */
+}
+
+.example-box {
+    background-color: #bbdefb; /* สีน้ำเงินอ่อน */
+    border: 5px dashed #2196f3; /* เส้นขอบประ */
+    padding: 30px; /* Padding เยอะขึ้น */
+    margin: 40px auto; /* จัดกลางและ Margin เยอะขึ้น */
+    width: 400px;
+    height: 180px;
+    display: block; /* กลับเป็น block เพื่อให้เนื้อหาภายในจัดเรียงปกติ */
+    text-align: left; /* จัดชิดซ้าย */
+}
+
+.example-box h3, .example-box p, .example-box span, .example-box button {
+    margin-bottom: 10px; /* จัดระยะห่างของ Element ภายใน Example Box */
+    display: block; /* ทำให้ span และ button เป็น block เพื่อให้ขึ้นบรรทัดใหม่ */
+}
+
+.example-box button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.example-box button:hover {
+    background-color: #0056b3;
+}
+
+.no-margin-overlap {
+    background-color: #ffe0b2;
+    border-color: #ff9800;
+    margin-top: 0; /* กำหนด margin-top ให้เป็น 0 เพื่อยกเลิก margin collapse ชั่วคราว */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #eee;
+    color: #555;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}

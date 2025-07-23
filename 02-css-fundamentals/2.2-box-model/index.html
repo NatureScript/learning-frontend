@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.2: CSS Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Understanding the CSS Box Model</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Back to Main Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction to Box Model</h2>
+            <p>Every HTML element is essentially a box. The Box Model describes how elements are rendered on a web page, including their content, padding, border, and margin.</p>
+
+            <div class="box content-box">
+                This is a **Content Box**. Its dimensions (width/height) will refer to the content area only.
+                <p>Content inside the box.</p>
+            </div>
+
+            <div class="box border-box">
+                This is a **Border Box**. Its dimensions (width/height) will include content, padding, and border.
+                <p>More content here.</p>
+            </div>
+
+            <div class="box example-box">
+                <h3>Example Box with Margin, Border, Padding</h3>
+                <p>This paragraph is inside the example box.</p>
+                <span>This is a span element.</span>
+                <button>Click Me</button>
+            </div>
+
+            <div class="box no-margin-overlap">
+                Another box.
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Learning Project</p>
+    </footer>
+
+</body>
+</html>
