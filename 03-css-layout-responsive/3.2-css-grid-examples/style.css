@@ -1,0 +1,218 @@
+/* Universal Selector & Basic Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 40px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 30px;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #0056b3;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* --- CSS Grid Specific Styles --- */
+
+.grid-container {
+    /* นี่คือการเปิดใช้งาน CSS Grid บน Parent Element */
+    **display: grid;**
+
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+    padding: 15px;
+    min-height: 200px; /* กำหนดความสูงขั้นต่ำเพื่อให้เห็นผลชัดเจน */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    justify-items: center; /* จัดกลางเนื้อหาในแต่ละ Grid Item ตามแนวนอน */
+    align-items: center; /* จัดกลางเนื้อหาในแต่ละ Grid Item ตามแนวตั้ง */
+}
+
+.grid-item {
+    background-color: #90caf9;
+    color: #333;
+    padding: 20px;
+    border: 1px solid #1e88e5;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 80px;
+    display: flex; /* ใช้ Flexbox ภายใน Item เพื่อจัดกลางข้อความ */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Basic Grid Layout */
+.grid-basic {
+    /* กำหนด Columns: 2 Columns, แต่ละอันกว้างเท่ากัน */
+    **grid-template-columns: 1fr 1fr;**
+    /* กำหนด Rows: 2 Rows, แต่ละอันสูงเท่ากัน */
+    **grid-template-rows: auto auto;** /* auto จะปรับความสูงตามเนื้อหา */
+    gap: 15px;
+}
+
+/* Defining Columns and Rows */
+.grid-fixed {
+    /* 3 Columns: 100px, 150px, auto (ส่วนที่เหลือ) */
+    grid-template-columns: 100px 150px auto;
+    /* 2 Rows: 50px, auto (ส่วนที่เหลือ) */
+    grid-template-rows: 50px auto;
+    gap: 10px;
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+}
+
+.grid-fr {
+    /* 3 Columns: คอลัมน์แรก 1 ส่วน, คอลัมน์สอง 2 ส่วน, คอลัมน์สาม 1 ส่วน */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    background-color: #fff3e0;
+    border-color: #ff9800;
+}
+
+/* Named Grid Lines */
+.grid-named-lines {
+    /* กำหนด Columns ด้วยชื่อเส้น: [col-start] 1fr [col-end] */
+    grid-template-columns: [main-start] 1fr [content-start] 3fr [content-end] 1fr [main-end];
+    /* กำหนด Rows ด้วยชื่อเส้น: [row-start] auto [header-end] auto [footer-end] */
+    grid-template-rows: [header-start] auto [nav-start] auto [content-start] 1fr [content-end] auto [footer-end];
+    gap: 15px;
+    background-color: #fce4ec;
+    border-color: #e91e63;
+    min-height: 400px; /* เพิ่มความสูงเพื่อให้เห็น Layout ชัดเจน */
+}
+/* วาง Grid Item ตามชื่อเส้นที่กำหนด */
+.item-a {
+    grid-column: main-start / main-end; /* Header Area กินพื้นที่ตั้งแต่เส้น main-start ถึง main-end */
+    grid-row: header-start / nav-start; /* Header Area อยู่ในแถวตั้งแต่ header-start ถึง nav-start */
+    background-color: #f8bbd0;
+}
+.item-b {
+    grid-column: main-start / content-start;
+    grid-row: nav-start / content-end;
+    background-color: #f48fb1;
+}
+.item-c {
+    grid-column: content-start / content-end;
+    grid-row: nav-start / content-end;
+    background-color: #ec407a;
+}
+.item-d {
+    grid-column: content-end / main-end;
+    grid-row: nav-start / content-end;
+    background-color: #e91e63;
+}
+.item-e {
+    grid-column: main-start / main-end;
+    grid-row: content-end / footer-end;
+    background-color: #ad1457;
+}
+
+/* Grid Gap Example */
+.grid-gap {
+    grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ กว้างเท่ากัน */
+    grid-template-rows: repeat(2, 100px); /* 2 แถว สูง 100px */
+    **gap: 20px;** /* กำหนดช่องว่างทั้งแนวตั้งและแนวนอน 20px */
+    background-color: #e0f2f7;
+    border-color: #00acc1;
+}
+
+/* Grid Span Example */
+.grid-span {
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns กว้างเท่ากัน */
+    grid-template-rows: repeat(2, 120px); /* 2 Rows สูง 120px */
+    gap: 10px;
+    background-color: #efebe9;
+    border-color: #795548;
+}
+
+.item-span-2-col {
+    **grid-column: span 2;** /* ทำให้ Item นี้ครอบคลุม 2 Columns */
+    background-color: #a1887f;
+}
+
+.item-span-2-row {
+    **grid-row: span 2;** /* ทำให้ Item นี้ครอบคลุม 2 Rows */
+    background-color: #d7ccc8;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    background-color: #eee;
+    color: #555;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+}

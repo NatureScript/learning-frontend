@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3.2: CSS Grid Examples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Grid Examples</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Back to Main Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid-container-example">
+            <h2>Basic Grid Layout</h2>
+            <p>การจัด Layout แบบ 2 มิติด้วย Grid Rows และ Grid Columns</p>
+            <div class="grid-container grid-basic">
+                <div class="grid-item">Header</div>
+                <div class="grid-item">Sidebar</div>
+                <div class="grid-item">Content</div>
+                <div class="grid-item">Footer</div>
+            </div>
+        </section>
+
+        <section class="grid-columns-rows-example">
+            <h2>Defining Columns and Rows</h2>
+            <h3>Fixed Columns & Rows</h3>
+            <div class="grid-container grid-fixed">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+
+            <h3>Flexible Columns (fr unit)</h3>
+            <div class="grid-container grid-fr">
+                <div class="grid-item">Col 1 (1fr)</div>
+                <div class="grid-item">Col 2 (2fr)</div>
+                <div class="grid-item">Col 3 (1fr)</div>
+            </div>
+
+            <h3>Named Grid Lines</h3>
+            <div class="grid-container grid-named-lines">
+                <div class="grid-item item-a">Header Area</div>
+                <div class="grid-item item-b">Nav Area</div>
+                <div class="grid-item item-c">Main Content</div>
+                <div class="grid-item item-d">Sidebar</div>
+                <div class="grid-item item-e">Footer Area</div>
+            </div>
+        </section>
+
+        <section class="grid-gap-example">
+            <h2>Grid Gap</h2>
+            <p>ช่องว่างระหว่าง Grid Cells</p>
+            <div class="grid-container grid-gap">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+            </div>
+        </section>
+
+        <section class="grid-span-example">
+            <h2>Grid Span</h2>
+            <p>ทำให้ Item ครอบคลุมหลาย Columns/Rows</p>
+            <div class="grid-container grid-span">
+                <div class="grid-item item-span-2-col">Span 2 Columns</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item item-span-2-row">Span 2 Rows</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learning Frontend</p>
+    </footer>
+</body>
+</html>
