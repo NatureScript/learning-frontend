@@ -1,0 +1,258 @@
+/* Universal Selector & Basic Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 15px; /* ลด padding สำหรับ Mobile */
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.8em; /* ขนาดฟอนต์สำหรับ Mobile */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    /* บน Mobile จะเป็น Block-level เพื่อให้ Navigation เป็น Stacked */
+    display: block;
+    margin: 10px 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    display: block; /* ทำให้ลิงก์เต็มพื้นที่ปุ่ม */
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    max-width: 1200px; /* กำหนด max-width กว้างขึ้นสำหรับ Desktop */
+    margin: 0 auto; /* จัดกลาง main content */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.6em; /* ขนาดฟอนต์สำหรับ Mobile */
+    text-align: center;
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* --- Intro Section Styles (Mobile First) --- */
+.intro-section .box {
+    background-color: #ffcccc; /* สีแดงอ่อนสำหรับ Mobile */
+    border: 1px solid #ff0000;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* --- Layout Section Styles (Mobile First) --- */
+.layout-container {
+    display: block; /* บน Mobile เป็น Block-level (Stacked) */
+    background-color: #e6e6fa;
+    border: 1px solid #8a2be2;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.content-area {
+    background-color: #d8bfd8;
+    border: 1px solid #9932cc;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    min-height: 80px;
+    display: flex; /* ใช้ Flexbox จัดกลางข้อความใน Item */
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* --- Typography Section Styles (Mobile First) --- */
+.resizable-text {
+    font-size: 1em; /* ขนาดฟอนต์พื้นฐานสำหรับ Mobile */
+    color: #008080; /* สีเขียวอมฟ้าสำหรับ Mobile */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.responsive-button {
+    display: block; /* ปุ่มเต็มความกว้าง */
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #28a745; /* สีเขียวสำหรับ Mobile */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.responsive-button:hover {
+    background-color: #218838;
+}
+
+/* ================================================= */
+/* MEDIA QUERIES FOR LARGER SCREENS         */
+/* ================================================= */
+
+/* Medium Devices (Tablets, Laptops) - e.g., 768px and up */
+**@media (min-width: 768px) {**
+    body {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header nav ul li {
+        display: inline-block; /* บน Tablet เป็น Inline-Block เพื่อเรียงแนวนอน */
+        margin: 0 15px;
+    }
+
+    /* --- Intro Section Styles for Medium Screens --- */
+    .intro-section {
+        display: flex; /* ใช้ Flexbox เพื่อจัดเรียงกล่องในแนวนอน */
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .intro-section .box {
+        flex: 1; /* ให้แต่ละกล่องแบ่งพื้นที่เท่าๆ กัน */
+        margin-bottom: 0; /* ลบ margin ด้านล่างออก */
+        background-color: #ffffcc; /* สีเหลืองอ่อนสำหรับ Tablet */
+        border-color: #ffc107;
+    }
+
+    /* --- Layout Section Styles for Medium Screens (2-column) --- */
+    .layout-container {
+        display: grid; /* ใช้ Grid สำหรับ Layout แบบคอลัมน์ */
+        grid-template-columns: 1fr 2fr; /* Sidebar 1 ส่วน, Main Content 2 ส่วน */
+        gap: 20px;
+    }
+
+    .content-area.sidebar {
+        margin-bottom: 0; /* ลบ margin ด้านล่างออก */
+    }
+    .content-area.ads {
+        /* บน Tablet จะยังคงอยู่ใต้ Main Content หรืออาจจะใช้ Grid Area จัดตำแหน่ง */
+        grid-column: 1 / span 2; /* ให้ Ads กิน 2 คอลัมน์ */
+        margin-top: 10px;
+    }
+
+    /* --- Typography Section Styles for Medium Screens --- */
+    .resizable-text {
+        font-size: 1.2em; /* เพิ่มขนาดฟอนต์ */
+        color: #800080; /* เปลี่ยนสีเป็นม่วง */
+    }
+
+    .responsive-button {
+        width: auto; /* ปุ่มไม่เต็มความกว้าง */
+        margin: 0 auto; /* จัดกลางปุ่ม */
+        font-size: 1.2em;
+        padding: 15px 25px;
+    }
+}
+
+/* Large Devices (Desktops) - e.g., 1024px and up */
+**@media (min-width: 1024px) {**
+    body {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    /* --- Intro Section Styles for Large Screens --- */
+    .intro-section .box {
+        padding: 20px;
+        background-color: #ccffcc; /* สีเขียวอ่อนสำหรับ Desktop */
+        border-color: #28a745;
+    }
+
+    /* --- Layout Section Styles for Large Screens (3-column) --- */
+    .layout-container {
+        grid-template-columns: 1fr 3fr 1fr; /* Sidebar, Main Content, Ads */
+        gap: 30px;
+    }
+
+    .content-area.main-content {
+        grid-column: 2; /* Main Content อยู่คอลัมน์ที่ 2 */
+        grid-row: 1; /* อยู่แถวที่ 1 */
+    }
+
+    .content-area.sidebar {
+        grid-column: 1; /* Sidebar อยู่คอลัมน์ที่ 1 */
+        grid-row: 1; /* อยู่แถวที่ 1 */
+    }
+
+    .content-area.ads {
+        grid-column: 3; /* Ads อยู่คอลัมน์ที่ 3 */
+        grid-row: 1; /* อยู่แถวที่ 1 */
+        margin-top: 0; /* ลบ margin ที่เคยตั้งไว้สำหรับ Tablet */
+    }
+
+    /* --- Typography Section Styles for Large Screens --- */
+    .resizable-text {
+        font-size: 1.4em; /* เพิ่มขนาดฟอนต์อีก */
+        color: #00008b; /* เปลี่ยนสีเป็นน้ำเงินเข้ม */
+    }
+
+    .responsive-button {
+        padding: 18px 30px;
+        font-size: 1.3em;
+    }
+}
