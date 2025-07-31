@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Left, Text Right Layout (Float)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS สำหรับ Float ยังคงเดิม */
+        .float-container {
+            max-width: 800px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+            overflow: hidden; /* สำคัญสำหรับการเคลียร์ float */
+        }
+
+        .float-image {
+            float: left;
+            width: 250px;
+            height: 180px;
+            margin-right: 20px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .float-content {
+            /* เนื้อหาจะปรับตัวเองให้อยู่ข้างๆ รูปภาพ */
+            /* อาจจะต้องเพิ่ม margin-left ให้กับ float-content หากต้องการให้เนื้อหาเริ่มต้นหลังจากรูปภาพชัดเจน */
+            /* เช่น margin-left: 270px; (width ของรูป + margin-right ของรูป) */
+            /* แต่ส่วนใหญ่ถ้าใช้ float content จะปรับเอง */
+        }
+
+        .float-content h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .float-content p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive: เมื่อหน้าจอแคบลง ให้ float ยกเลิก */
+        @media (max-width: 600px) {
+            .float-image {
+                float: none;
+                display: block;
+                margin: 0 auto 15px auto;
+            }
+
+            .float-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="float-container">
+         <img src="../../images/nodrone.png" alt="No Drone Sign" class="float-image"> 
+
+        <div class="float-content">
+            <h2>ด่วน! กพท. สั่งห้ามบินโดรนทั่วประเทศชั่วคราว มีผล 30 ก.ค. – 15 ส.ค. 68</h2>
+            <p>กพท. ออกประกาศห้ามบินโดรนทุกประเภท ทั่วประเทศ เพื่อความมั่นคงจากสถานการณ์ชายแดนไทย–กัมพูชา</p>
+            <p>สำนักงานการบินพลเรือนแห่งประเทศไทย (กพท.) หรือ CAAT ออกประกาศด่วน ห้ามทำการบินหรือปล่อยอากาศยานซึ่งไม่มีนักบิน (โดรน) ทุกประเภทในพื้นที่ทั่วประเทศ โดยมีผลตั้งแต่วันที่ 30 กรกฎาคม 2568 จนถึงวันที่ 15 สิงหาคม 2568 หรือจนกว่าจะมีคำสั่งเปลี่ยนแปลง</p>
+            <p>การประกาศครั้งนี้มีขึ้นเพื่อป้องกันความเสี่ยงด้านความมั่นคงและความปลอดภัยของประเทศ จากสถานการณ์ความไม่สงบบริเวณชายแดนไทย–กัมพูชา ซึ่งอาจส่งผลกระทบต่อการปฏิบัติงานของเจ้าหน้าที่ฝ่ายความมั่นคงในพื้นที่ต่าง ๆ</p>
+            <p>พลอากาศเอก มนัท ชวนะประยูร ผู้อำนวยการสำนักงานการบินพลเรือนแห่งประเทศไทย เปิดเผยว่า การห้ามบินโดรนในครั้งนี้สอดคล้องกับกฎหมายและประกาศที่เกี่ยวข้อง ซึ่งให้อำนาจ กพท. ในการระงับการใช้งานอากาศยานไร้คนขับในช่วงเวลาที่อาจกระทบต่อความสงบเรียบร้อยและความมั่นคงของประเทศ พร้อมย้ำว่า ผู้ใดฝ่าฝืนจะต้องระวางโทษตามพระราชบัญญัติการเดินอากาศ พ.ศ. 2497 และที่แก้ไขเพิ่มเติม ซึ่งอาจมีโทษจำคุกไม่เกิน 1 ปี หรือปรับไม่เกิน 40,000 บาท หรือทั้งจำทั้งปรับ และเจ้าหน้าที่ทหารมีอำนาจทำลายอากาศยานได้ หากมองว่าเป็นภัยต่อความมั่นคง</p>
+            <p>หากผู้ใดพบเห็นหรือทราบว่ามีการบังคับหรือปล่อยโดรนที่ฝ่าฝืนประกาศนี้ ให้แจ้งข้อมูล ได้แก่ วัน เวลา สถานที่ที่พบเห็น ลักษณะของโดรน และภาพถ่ายหรือคลิปวิติโอ (ถ้ามี) ไปยังหน่วยงานที่รับผิดชอบโดยเร็วผ่านช่องทางใดช่องทางหนึ่ง ดังนี้
+            <br>1. กองพัฒนามาตรฐานและเทคโนโลยีระบบอากาศยานซึ่งไม่มีนักบิน ฝ่ายมาตรฐานอากาศยานซึ่งไม่มีนักบิน สำนักงานการบินพลเรือนแห่งประเทศไทย โทรศัพท์ 02-568-8851 หรืออีเมล uas_us@caat.or.th
+            <br>2. ศูนย์ต่อต้านอากาศยานซึ่งไม่มีนักบิน ประเภทอากาศยานที่ควบคุมการบินจากภายนอก (โดรน) กองบัญชาการตำรวจนครบาล (สตอ.น.) โทรศัพท์ 02-126-7846 หรืออีเมล antidrone.police@gmail.com
+            <br>3. ศูนย์แจ้งเหตุใกล้พื้นที่ เช่น สถานีตำรวจท้องที่ หน่วยทหาร หรือหน่วยความมั่นคงที่รับผิดชอบในพื้นที่นั้น ๆ</p>
+            <p>กพท. ขอความร่วมมือประชาชน งดใช้โดรนทุกประเภทในช่วงเวลาดังกล่าว เพื่อร่วมกันรักษาความปลอดภัยของประเทศ และสนับสนุนภารกิจของเจ้าหน้าที่ในพื้นที่ชายแดนอย่างเต็มที่</p>
+
+            <p>คุณสามารถเพิ่มย่อหน้าอื่นๆ หรือองค์ประกอบอื่นๆ ได้ที่นี่ เช่น ลิงก์ หรือปุ่มต่างๆ เพื่อขยายความหรือนำทางไปยังข้อมูลเพิ่มเติม</p>
+
+        </div> <a href="https://web.facebook.com/share/16pxv6Uh4J/">CAAT - The Civil Aviation Authority of Thailand</a> 
+        <br>
+        <br>
+
+        <p>The Civil Aviation Authority of Thailand (CAAT) has issued an urgent announcement banning all types of unmanned aircraft (drones) nationwide, effective from July 30, 2025, to August 15, 2025, or until further notice.</p>
+        <p>This announcement is intended to prevent national security and safety risks stemming from the unrest along the Thai-Cambodian border, which could impact the operations of security officials in various areas.</p>
+        <p>Air Chief Marshal Manat Chavanaprayoon, Director-General of the CAAT, revealed that this drone ban is in line with relevant laws and announcements, which authorize the CAAT to suspend the use of unmanned aircraft during times that could disrupt national peace and security. He emphasized that violators are subject to penalties under the Aviation Act of 1954 and its amendments, which could include imprisonment for up to one year or a fine of up to 40,000 baht, or both. Military officials are also authorized to destroy the aircraft if they deem it a threat to national security.</p>
+        <p>If anyone witnesses or knows of a drone being piloted or launched in violation of this announcement, please report the date, time, location, and type of drone, and photos or video clips (if any) to the responsible agencies immediately through one of the following channels:
+        <br>1. Unmanned Aircraft Systems Standards and Technology Development Division, Unmanned Aircraft Standards Division, Civil Aviation Authority of Thailand, Tel. 02-568-8851 or email uas_us@caat.or.th
+        <br>2. Unmanned Aircraft Counter-Aircraft Center, Remotely Piloted Aircraft (Drones), Metropolitan Police Bureau (S.O.N.), Tel. 02-126-7846 or email antidrone.police@gmail.com
+        <br>3. Nearby reporting centers, such as local police stations, military units, or security units responsible for the area</p>
+        <p>CAAT requests the public's cooperation in refraining from using drones of any kind during the aforementioned period to maintain national security and fully support the missions of officials in border areas.</p>
+
+    </div> </body>
+</html>

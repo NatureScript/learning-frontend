@@ -256,3 +256,47 @@ p {
         font-size: 1.3em;
     }
 }
+/* --- CSS ใหม่สำหรับส่วนรูปภาพและบทความ --- */
+
+.float-container {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    overflow: hidden; /* สำคัญสำหรับการเคลียร์ float */
+}
+
+.float-image {
+    float: left; /* ทำให้รูปภาพลอยไปทางซ้าย */
+    width: 250px;
+    height: 180px;
+    margin-right: 20px; /* ช่องว่างทางขวาของรูปภาพ */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.float-content {
+    /* เนื้อหาจะปรับตัวเองให้อยู่ข้างๆ รูปภาพ */
+}
+
+.float-content h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.float-content p {
+    margin-bottom: 10px;
+}
+
+/* Responsive สำหรับส่วนรูปภาพและบทความ: เมื่อหน้าจอแคบลง ให้ float ยกเลิก */
+@media (max-width: 600px) {
+    .float-image {
+        float: none; /* ยกเลิก float */
+        display: block; /* ทำให้รูปภาพเป็น Block */
+        margin: 0 auto 15px auto; /* จัดกลางรูปภาพและเพิ่ม margin ด้านล่าง */
+    }
+
+    .float-content {
+        text-align: center; /* จัดกลางข้อความ */
+    }
