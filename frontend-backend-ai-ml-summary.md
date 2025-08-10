@@ -42,3 +42,47 @@ myprojects/
 └── accessibility-notes.md
 
 ```
+```
+
+Updated Learning Repository Structure:
+
+myprojects/
+└── learning-frontend/                                 <-- This folder is dedicated to learning and experimentation code.
+    ├── 00-overview/
+    │   └── frontend-backend-ai-ml-summary.md
+    │
+    ├── 01-html-basics/                                 <-- Learn fundamental HTML structure and common tags.
+    │   ├── 1.1-basic-structure-elements/               <-- (index.html, notes.txt/md)
+    │   ├── 1.2-attributes-and-linking/                 <-- (index.html, images/, notes.txt/md)
+    │   ├── 1.3-semantic-html5/                         <-- (index.html, notes.txt/md)
+    │   ├── 1.4-forms/                                  <-- (index.html, notes.txt/md)
+    │   └── 1.5-tables/                                 <-- (index.html, notes.txt/md)
+    │
+    ├── 02-css-fundamentals/                            <-- For learning core CSS principles and styling.
+    │   ├── 2.1-selectors-properties/                   <-- (index.html, style.css, notes.txt/md)
+    │   └── 2.2-box-model/                              <-- (index.html, style.css, notes.txt/md)
+    │
+    ├── 03-css-layout-responsive/                       <-- For learning Flexbox, CSS Grid, and Responsive Design.
+    │   ├── 3.1-flexbox-playground/                     <-- (index.html, style.css, notes.txt/md)
+    │   ├── 3.2-css-grid-examples/                      <-- (index.html, style.css, notes.txt/md)
+    │   └── 3.3-media-queries-practice/                 <-- (index.html, style.css, notes.txt/md)
+    │
+    ├── 04-javascript-basics/                           <-- For learning foundational JavaScript, DOM Manipulation, and core JS concepts.
+    │   ├── 4.1-variables-functions/                    <-- (index.html, script.js, notes.txt/md)
+    │   ├── 4.2-dom-manipulation/                       <-- (index.html, script.js, notes.txt/md)
+    │   ├── 4.3-data-structures/                        <-- (index.html, script.js, notes.txt/md)
+    │   ├── 4.4-loops-conditionals/                     <-- (index.html, script.js, notes.txt/md)
+    │   └── 4.5-error-handling-basic/                   <-- (index.html, script.js, notes.txt/md)
+    │
+    ├── 05-javascript-advanced/                         <-- For learning advanced JavaScript concepts like Asynchronous operations and APIs.
+    │   ├── 5.1-asynchronous-js/                        <-- (index.html, script.js, notes.txt/md)
+    │   ├── 5.2-fetch-api-example/                      <-- (index.html, script.js, notes.txt/md)
+    │   └── 5.3-event-handling-patterns/                <-- (index.html, script.js, notes.txt/md)
+    │
+    ├── 06-tools-best-practices/                        <-- For collecting tool summaries, Git cheatsheets, and general best practices.
+    │   ├── git-commands-cheatsheet.md
+    │   ├── browser-devtools-tips.txt
+    │   └── accessibility-notes.md
+    │
+    └── (Future Parts: e.g., 07-modern-js-features/, 08-project-x/)
+    ```
