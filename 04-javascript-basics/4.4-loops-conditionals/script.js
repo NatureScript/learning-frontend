@@ -90,3 +90,101 @@ if (!isSunny) { // !isSunny คือ false
 } else {
     console.log("1.5 It is sunny today.");
 }
+// --- Part 2: Loops ---
+console.log("\n--- Part 2: Loops ---"); // เพิ่มบรรทัดว่างเพื่อแยกส่วนใน Console
+
+// 2.1 for Loop
+// ใช้เมื่อรู้จำนวนรอบที่แน่นอน
+console.log("2.1 For Loop:");
+for (let i = 0; i < 5; i++) { // i = initializer; condition; increment/decrement
+    console.log("  Loop iteration (for):", i);
+}
+// ใช้ for loop วนซ้ำ Array
+let fruits = ["Apple", "Banana", "Cherry", "Date"];
+console.log("2.1 Looping through fruits with for loop:");
+for (let i = 0; i < fruits.length; i++) {
+    console.log("  ", fruits[i]);
+}
+
+
+// 2.2 while Loop
+// ใช้เมื่อไม่รู้จำนวนรอบที่แน่นอน แต่รู้เงื่อนไขที่จะหยุด
+console.log("2.2 While Loop:");
+let count = 0;
+while (count < 3) {
+    console.log("  Loop iteration (while):", count);
+    count++; // สำคัญ: ต้องเพิ่มค่าตัวนับ มิฉะนั้นจะเกิด Infinite Loop (วนไม่รู้จบ)
+}
+
+// ตัวอย่าง while loop ที่ซับซ้อนขึ้น: ทอยลูกเต๋าจนกว่าจะได้ 6
+console.log("2.2 Rolling a dice until 6:");
+let diceRoll = 0;
+let attempts = 0;
+while (diceRoll !== 6) {
+    diceRoll = Math.floor(Math.random() * 6) + 1; // สุ่มตัวเลข 1-6
+    attempts++;
+    console.log(`  Attempt ${attempts}: Rolled a ${diceRoll}`);
+}
+console.log(`  It took ${attempts} attempts to roll a 6.`);
+
+
+// 2.3 forEach Method (สำหรับ Arrays)
+// เป็น method ที่ใช้งานง่ายสำหรับ Array โดยเฉพาะ
+console.log("2.3 ForEach Method (for Arrays):");
+let colors = ["Red", "Green", "Blue"];
+colors.forEach(function(color, index) { // function จะรับ element และ index เข้ามา
+    console.log(`  Color at index ${index}: ${color}`);
+});
+// สามารถใช้ Arrow Function ได้ (เป็นรูปแบบที่นิยมกว่า)
+colors.forEach((color) => {
+    console.log(`  Another color: ${color}`);
+});
+
+
+// 2.4 for...of Loop (สำหรับ Iterables เช่น Arrays, Strings)
+// ใช้วนซ้ำ "ค่า" ของ Element
+console.log("2.4 For...of Loop:");
+let animals = ["Dog", "Cat", "Bird"];
+for (let animal of animals) {
+    console.log("  Animal:", animal);
+}
+// ใช้กับ String
+let greeting = "Hello";
+console.log("2.4 Looping through string with for...of:");
+for (let char of greeting) {
+    console.log("  Character:", char);
+}
+
+
+// 2.5 for...in Loop (สำหรับ Objects)
+// ใช้วนซ้ำ "ชื่อ Property (key)" ของ Object
+console.log("2.5 For...in Loop:");
+let car = {
+    brand: "Toyota",
+    model: "Camry",
+    year: 2020
+};
+for (let key in car) {
+    console.log(`  ${key}: ${car[key]}`); // ใช้ key เพื่อเข้าถึง value
+}
+
+// 2.6 Break and Continue Statements
+// break: ใช้เพื่อหยุด loop ทันที
+console.log("2.6 Break Statement:");
+for (let i = 0; i < 10; i++) {
+    if (i === 3) {
+        console.log("  Breaking loop at i =", i);
+        break; // Loop จะหยุดที่นี่
+    }
+    console.log("  Current i (before break):", i);
+}
+
+// continue: ใช้เพื่อข้ามรอบปัจจุบันของ loop ไปยังรอบถัดไป
+console.log("2.6 Continue Statement:");
+for (let i = 0; i < 5; i++) {
+    if (i === 2) {
+        console.log("  Skipping iteration at i =", i);
+        continue; // ข้ามการทำงานที่เหลือในรอบนี้ ไปรอบถัดไปทันที
+    }
+    console.log("  Current i (after continue):", i);
+}
